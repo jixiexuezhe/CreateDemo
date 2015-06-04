@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+           http://www.springframework.org/schema/context   
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	default-lazy-init="true" default-autowire="byName">
+	
+	
+	<context:annotation-config />
+	
+	<context:component-scan base-package="com.struts2.dao" />
+	<context:component-scan base-package="com.struts2.dao.impl" />
+	<context:component-scan base-package="com.struts2.service" />
+	<context:component-scan base-package="com.struts2.service.impl" />
+	<context:component-scan base-package="com.struts2.commons" />
+	
+	
+	<!-- <context:component-scan base-package="com">  
+        <context:include-filter type="regex" expression="com/.dao.*"/>  
+        正则表达式必须格式正确，否则无效。以下是无效的示例  
+        <context:exclude-filter type="regex" expression="/.service/..*"/>  
+        <context:exclude-filter type="regex" expression="com/.service*"/>  
+        <context:exclude-filter type="regex" expression=".service*"/>  
+          
+         正确格式:从base-package开始  
+         <context:exclude-filter type="regex" expression="com/.service.*"/>  
+         <context:exclude-filter type="regex" expression="com/.service/..*"/>  
+           
+    </context:component-scan> -->
+</beans>
